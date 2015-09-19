@@ -11,7 +11,7 @@ body {
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    background-color: #2DBEB2;
+    background-color: #3482DB;
     color: white;
 }
 
@@ -24,17 +24,17 @@ body {
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
 	color: #ecdbff;
-	background-color: #8e44ad;
+	background-color: #3482DB;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
 	color: #ecdbff;
-	background-color: #8e44ad;
+	background-color: #3482DB;
 }
 .navbar-default .navbar-toggle {
-	border-color: #8e44ad;
+	border-color: #3482DB;
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-	background-color: #8e44ad;
+	background-color: #3482DB;
 }
 .navbar-default .navbar-toggle .icon-bar {
 	background-color: #ecf0f1;
@@ -68,14 +68,16 @@ body {
 a.navbar-brand {
 	color: white !important;
 	font-weight: 400 !important;
-	padding-right: 100px;
+	padding-right: 200px;
 }
 
 #transactionList {
 	padding:50px;
-	margin-top:70px;
 	max-height:500px;
 	overflow: auto;
+	width: 88%;
+	margin:0 auto;
+	margin-top:70px;
 }
 
 .panel-heading {
@@ -86,5 +88,10 @@ a.navbar-brand {
 thead {
 	font-weight: 400;
 	font-size: 1.1em;
+}
+
+#calendar {
+	width: 80%;
+	margin:0 auto;
 }
 

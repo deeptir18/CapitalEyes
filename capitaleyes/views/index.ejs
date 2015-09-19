@@ -11,7 +11,13 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic,600italic,300italic' rel='stylesheet' type='text/css'>
 <script src="/js/bootstrap.min.js"></script>
+<!-- <script src="/js/api.js"></script> -->
+<script src="/js/load_page.js"></script>
 <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+<link rel='stylesheet' href='/stylesheets/fullcalendar.css' />
+<script src='/js/jquery.min.js'></script>
+<script src='/js/moment.min.js'></script>
+<script src='/js/fullcalendar.js'></script>
 <link href="/stylesheets/css.css" rel="stylesheet">
 </head>
 
@@ -46,16 +52,17 @@
     <div class="panel-heading">Transaction History</div>
     <table class="table" id="transactions">
       <thead>
-        <td>Transaction Name</td>
-        <td>Date</td>
-        <td>Amount</td>
-        <td>Tags</td>
+        <td id="111" class="name">Transaction Name</td>
+        <td id="111" class="date">Date</td>
+        <td id="111" class="amount">Amount</td>
+        <td id="111" class="tags">Tags</td>
+        <td id="111" class="edittag" onclick="changetag(111)">
       </thead>
       <tr>
-        <td>Ice cream</td>
-        <td>1/1/2015</td>
-        <td>$50</td>
-        <td>Food</td>
+        <td id="2" class="name">Ice cream</td>
+        <td id="2" class="date">1/1/2015</td>
+        <td id="2" class="amount">$50</td>
+        <td id="2" class="tags">Food</td>
       </tr>
       <tr>
         <td>T card</td>
@@ -63,71 +70,6 @@
         <td>$30</td>
         <td>Travel</td>
       </tr>
-      <tr>
-        <td>T card</td>
-        <td>2/5/2015</td>
-        <td>$30</td>
-        <td>Travel</td>
-      </tr>
-      <tr>
-        <td>T card</td>
-        <td>2/5/2015</td>
-        <td>$30</td>
-        <td>Travel</td>
-      </tr>
-      <tr>
-        <td>T card</td>
-        <td>2/5/2015</td>
-        <td>$30</td>
-        <td>Travel</td>
-      </tr>
-      <tr>
-        <td>T card</td>
-        <td>2/5/2015</td>
-        <td>$30</td>
-        <td>Travel</td>
-      </tr>
-      <tr>
-        <td>T card</td>
-        <td>2/5/2015</td>
-        <td>$30</td>
-        <td>Travel</td>
-      </tr>
-      <tr>
-        <td>T card</td>
-        <td>2/5/2015</td>
-        <td>$30</td>
-        <td>Travel</td>
-      </tr>
-      <tr>
-        <td>T card</td>
-        <td>2/5/2015</td>
-        <td>$30</td>
-        <td>Travel</td>
-      </tr>
-      <tr>
-        <td>Ice cream</td>
-        <td>1/1/2015</td>
-        <td>$50</td>
-        <td>Food</td>
-      </tr>
-      <tr>
-        <td>T card</td>
-        <td>2/5/2015</td>
-        <td>$30</td>
-        <td>Travel</td>
-      </tr>
-      <tr>
-        <td>Ice cream</td>
-        <td>1/1/2015</td>
-        <td>$50</td>
-        <td>Food</td>
-      </tr>
-      <tr>
-        <td>T card</td>
-        <td>2/5/2015</td>
-        <td>$30</td>
-        <td>Travel</td>
       </tr>
     </table>
   </div>
