@@ -1,0 +1,90 @@
+body {
+	font-family:"Open Sans", sans-serif;
+	font-weight: 300;
+}
+
+.navbar{
+	color: white; 
+    background-color: #3498DB;
+	border-color: #3498DB;
+	font-size:120%;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #2DBEB2;
+    color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: white;
+	margin-right: 20px;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: white;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #ecdbff;
+	background-color: #8e44ad;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+	color: #ecdbff;
+	background-color: #8e44ad;
+}
+.navbar-default .navbar-toggle {
+	border-color: #8e44ad;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	background-color: #8e44ad;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #ecf0f1;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+	border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+	color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+	color: #ecdbff;
+}
+
+.navbar-brand {
+	margin-left: 20px;
+}
+
+.logo {
+	margin-left:100px;
+	width:45px;
+	height:auto;
+	padding-right:7px;
+	margin-top:-7px;
+	display:inline-block;
+	float: left;
+	clear:both;
+}
+
+a.navbar-brand {
+	color: white !important;
+	font-weight: 400 !important;
+	padding-right: 100px;
+}
+
+#transactionList {
+	padding:50px;
+	margin-top:70px;
+	max-height:500px;
+	overflow: auto;
+}
+
+.panel-heading {
+	font-weight: 400;
+	font-size: 1.5em;
+}
+
+thead {
+	font-weight: 400;
+	font-size: 1.1em;
+}
+
