@@ -6,7 +6,7 @@ var transactionSchema = new Schema({
 	description: String,
 	amount: Number,
 	date: Date,
-	tag: String
+	tag: [String]
 });
 
 var Transaction = mongoose.model('Transaction', transactionSchema);
