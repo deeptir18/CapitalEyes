@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 ObjectId = Schema.ObjectId;
 var transactionSchema = new Schema({
-	transaction_id: String,
+	transaction_id: String, //CapitalOne Id for bill, deposit, etc.
 	description: String,
 	amount: Number,
 	date: Date,
