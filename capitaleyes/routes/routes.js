@@ -16,16 +16,29 @@ router.get('/login', function(req, res) {
   request(apiRequest, function (error, response, body) {
   if (!error && response.statusCode == 200) {
     console.log(body); //use the body
+    var transactionArray= []
+    //amount added or subtracted, date, title, 
     body.forEach(function(purchase) {
-    
+      purchaseID = purchase._id;
+      purchaseDate = purchase.purchase_date;
+      purchaseAmt = purchase.amount
+      purchaseItem = purchase.description;
+      transactionArray.append( {
+        id: purchaseID,
+        date: purchaseDate,
+        amt: purchaseAmt,
+        item: purchaseItem
+      });
+    });
+    req.json( {
+      purchaseArray: transactionArray
     });
     }
   });
-
-  
-
   }
 });
+
+router.post('/updateTransaction', function(req, res) {
    
 
 
