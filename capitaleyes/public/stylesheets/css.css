@@ -97,6 +97,12 @@ thead {
 	margin:0 auto;
 }
 
+#budget-setter {
+	width: 80%;
+	margin:0 auto;
+	margin-top:50px;
+}
+
 #slider1, #slider2, #slider3 {
     float: left;
     clear: left;
