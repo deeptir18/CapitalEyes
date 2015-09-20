@@ -10,9 +10,9 @@ router.get('/login', function(req, res) {
   var userID = req.body.user_id;
 
   //get: /accounts/id/purchase
-  //http://api.reimaginebanking.com/accounts/55e94a6cf8d8770528e6190a/purchases?key=d7d568706156d07aed570d9ae78d97ab
+  //http://api.reimaginebanking.com/accounts/55e94a6cf8d8770528e6190a/purchases?key=504b6724f21e8161fc5b1ddbcb07a55d
 
-  var apiRequest = "http://api.reimaginebanking.com/accounts/" + userID + "/purchases?key=d7d568706156d07aed570d9ae78d97ab" //includes api key at end
+  var apiRequest = "http://api.reimaginebanking.com/accounts/" + userID + "/purchases?key=504b6724f21e8161fc5b1ddbcb07a55d" //includes api key at end
   request(apiRequest, function (error, response, body) {
   if (!error && response.statusCode == 200) {
     console.log(body); //use the body
@@ -65,8 +65,8 @@ router.post('/addTransaction', function(req, res) {
   var transactionID = req.body.transactionID;
   var userID = req.body.userID;
   var tag = req.body.tag;
-  //"http://api.reimaginebanking.com/purchases/55fde3b3ce1cef140015e2c7?key=d7d568706156d07aed570d9ae78d97ab"
-  var apiRequest = "http://api.reimaginebanking.com/purchases/" + transactionID + "?key=d7d568706156d07aed570d9ae78d97ab";
+  //"http://api.reimaginebanking.com/purchases/55fde3b3ce1cef140015e2c7?key=504b6724f21e8161fc5b1ddbcb07a55d"
+  var apiRequest = "http://api.reimaginebanking.com/purchases/" + transactionID + "?key=504b6724f21e8161fc5b1ddbcb07a55d";
     request(apiRequest, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       console.log(body) 

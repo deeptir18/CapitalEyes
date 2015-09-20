@@ -7,19 +7,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic,600italic,300italic' rel='stylesheet' type='text/css'>
 <script src="/js/bootstrap.min.js"></script>
 <!-- <script src="/js/api.js"></script> -->
 <script src="/js/load_page.js"></script>
 <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
 <link rel='stylesheet' href='/stylesheets/fullcalendar.css' />
-<script src='/js/jquery.min.js'></script>
 <script src='/js/moment.min.js'></script>
 <script src='/js/fullcalendar.js'></script>
 <script src="/js/smooth-scroll.js"></script>
 <link href="/stylesheets/css.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -96,6 +99,9 @@
 <div id="calendar">
 </div>
 
+<div id="slider">
+</div>
+
 <div id="circleInterface">
 </div>
 
@@ -110,6 +116,13 @@
 
 </div id="badges">
 </div>
+
+
+<script>
+  $(function() {
+    $( "#slider" ).slider();
+  });
+</script>
 
 <script>
   smoothScroll.init({
