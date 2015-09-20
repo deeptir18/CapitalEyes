@@ -10,7 +10,7 @@
 <!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic,600italic,300italic' rel='stylesheet' type='text/css'>
 <script src="/js/bootstrap.min.js"></script>
@@ -96,10 +96,28 @@
   </div>
 </div>
 
-<div id="calendar">
+<div id="budget-label">
+  <label for="amount1">Monthly Budget:</label>
+  <input type="text" id="amount1" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</div>
+<div id="slider1">
 </div>
 
-<div id="slider">
+<div id="budget-label">
+  <label for="amount2">Monthly Budget:</label>
+  <input type="text" id="amount2" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</div>
+<div id="slider2">
+</div>
+
+<div id="budget-label">
+  <label for="amount3">Monthly Budget:</label>
+  <input type="text" id="amount3" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</div>
+<div id="slider3">
+</div>
+
+<div id="calendar">
 </div>
 
 <div id="circleInterface">
@@ -120,9 +138,50 @@
 
 <script>
   $(function() {
-    $( "#slider" ).slider();
+    $( "#slider1" ).slider({
+      value:100,
+      min: 0,
+      max: 500,
+      step: 1,
+      slide: function( event, ui ) {
+        $( "#amount1" ).val( "$" + ui.value );
+      }
+    });
+    $( "#amount1" ).val( "$" + $( "#slider1" ).slider( "value" ) );
   });
 </script>
+
+<script>
+  $(function() {
+    $( "#slider2" ).slider({
+      value:100,
+      min: 0,
+      max: 500,
+      step: 1,
+      slide: function( event, ui ) {
+        $( "#amount2" ).val( "$" + ui.value );
+      }
+    });
+    $( "#amount2" ).val( "$" + $( "#slider2" ).slider( "value" ) );
+  });
+</script>
+
+<script>
+  $(function() {
+    $( "#slider3" ).slider({
+      value:100,
+      min: 0,
+      max: 500,
+      step: 1,
+      slide: function( event, ui ) {
+        $( "#amount3" ).val( "$" + ui.value );
+      }
+    });
+    $( "#amount3" ).val( "$" + $( "#slider3" ).slider( "value" ) );
+  });
+</script>
+
+
 
 <script>
   smoothScroll.init({

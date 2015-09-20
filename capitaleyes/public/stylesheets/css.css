@@ -96,6 +96,15 @@ thead {
 	margin:0 auto;
 }
 
+#slider1, #slider2, #slider3 {
+    float: left;
+    clear: left;
+    width: 300px;
+    margin: 15px;
+    background: #ecf0f1; 
+    border-color: #729fcf;
+  }
+
 h2{
 	font-weight: 400 !important;
 	font-size: 1.5em !important;
