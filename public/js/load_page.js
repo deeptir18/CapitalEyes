@@ -9,7 +9,7 @@ var login = function() {
 		        '<td class="pls date">Date</td>' + 
 		        '<td class="pls amount">Amount</td>' + 
 		        '<td class="pls tags">Tags</td>' + 
-		        // '<td class="editTag">Edit Tag</td>' + 
+
 		    '</thead>';
 	transactions = [];
 
@@ -73,15 +73,6 @@ var login = function() {
 		});
 }
 
-// $(document).ready(function() {
-// 	$('#calendar').fullCalendar({
-// 	        // put your options and callbacks here
-// 	        events: events,
-// 	        color: "yellow",
-// 	        textColor: "black"
-// 	})
-	
-// });
 
 
-var tags = {"55fe05f9ce1cef140015e34f":"Food", "55fe064dce1cef140015e350":"Food", "55fe0679ce1cef140015e351":"Food", "55fe0687ce1cef140015e352":"Food", "55fe068bce1cef140015e353":"Food", "55fe06d4ce1cef140015e354":"Entertainment", "55fe08d8ce1cef140015e358":"Utilities", "55fe38dace1cef140015e3b4":"Income", "55fe3965ce1cef140015e3b5":"Income", "55fe3997ce1cef140015e3b6":"Income"}
+var tags = {"55fe05f9ce1cef140015e34f":"Food", "55fe064dce1cef140015e350":"Food", "55fe0679ce1cef140015e351":"Food", "55fe0687ce1cef140015e352":"Food", "55fe068bce1cef140015e353":"Food", "55fe06d4ce1cef140015e354":"Entertainment", "55fe08d8ce1cef140015e358":"Utilities", "55fe38dace1cef140015e3b4":"Income", "55fe3965ce1cef140015e3b5":"Income", "55fe3997ce1cef140015e3b6":"Income", "55fe66a6ce1cef140015e3cf":"Entertainment", "55fe6647ce1cef140015e3cd":"Food", "55fe6706ce1cef140015e3d1":"Food", "55fe660fce1cef140015e3cc":"Food", "55fe672ece1cef140015e3d2":"Food", "55fe6674ce1cef140015e3ce":"Utilities"}

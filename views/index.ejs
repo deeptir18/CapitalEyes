@@ -7,7 +7,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-<!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script type="text/javascript" src="/js/jquery.canvasjs.min.js"></script>
@@ -15,7 +14,6 @@
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic,600italic,300italic' rel='stylesheet' type='text/css'>
 <script src="/js/bootstrap.min.js"></script>
-<!-- <script src="/js/api.js"></script> -->
 <script src="/js/load_page.js"></script>
 <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
 <link rel='stylesheet' href='/stylesheets/fullcalendar.css' />
@@ -53,6 +51,13 @@ login();
   </div>
 </nav>
 
+<div id="splash">
+  <div class="txt txt1">Banking,<br>visualized.</div>
+  <div  class="txt txt2">Experience banking in a new way<br> and see more
+    than just your transactions. <br>CapitalEyes is a new view on banking -<br>
+    capitalize on this and manage <br>your spending in a more <br>intuitive way.</div>
+  <img src="/images/splash.jpg" id="spl">
+</div>
 
 <div id="transactionList">
   <div class="panel panel-default">
@@ -68,95 +73,102 @@ login();
 
 
 
-
-<div id="graph">
-  <div id="chartContainer" style="height: 350px; width: 75%;"></div>
-</div>
-
-<div id="budget-setter" class="list-group">
-  <div class="list-group-item active">Edit Monthly Budgets</div>
-
-  <div class="list-group-item l1">
-      <div id="budget-label"  class="slide">
-        <label for="amount1">Food:</label>
-        <input type="text" id="amount1" readonly style="color:#f6931f;">
-      </div>
-      <br>
-      <div id="slider1" class="slide">
-      </div>
-  </div>
-
-  <div class="list-group-item l1">
-      <div id="budget-label"  class="slide">
-        <label for="amount2">Utilities:</label>
-        <input type="text" id="amount2" readonly style="color:#f6931f;">
-      </div>
-      <br>
-      <div id="slider2"  class="slide">
-      </div>
-  </div>
-
-  <div class="list-group-item l1">
-      <div id="budget-label"  class="slide">
-        <label for="amount3">Travel:</label>
-        <input type="text" id="amount3" readonly style="color:#f6931f;">
-      </div>
-      <br>
-      <div id="slider3"  class="slide">
-      </div>
-  </div>
-
-  <div class="list-group-item l1">
-      <div id="budget-label"  class="slide">
-        <label for="amount4">Entertainment:</label>
-        <input type="text" id="amount4" readonly style="color:#f6931f;">
-      </div>
-      <br>
-      <div id="slider4"  class="slide">
-      </div>
+<div id="chart" class="list-group">
+  <div class="list-group-item active">Balance Over Time</div>
+    <div class="list-group-item l2">
+      <div id="graph">
+      <div id="chartContainer" style="height: 350px; width: 75%;"></div>
+    </div>
   </div>
 </div>
 
 
-<div id="budget-display" class="list-group">
-  <div class="list-group-item active">View Budget Spending</div>
+<div id="budgetstuff">
+    <div id="budget-setter" class="list-group">
+      <div class="list-group-item active">Edit Monthly Budgets</div>
 
-  <div class="list-group-item">
-      <div id="budget-display-label1">Food</div>
-      $249 spent
-      <div class="progress">
-      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+      <div class="list-group-item l1">
+          <div id="budget-label"  class="slide">
+            <label for="amount1">Food:</label>
+            <input type="text" id="amount1" readonly style="color:#f6931f;">
+          </div>
+          <br>
+          <div id="slider1" class="slide">
+          </div>
       </div>
-      </div>
-  </div>
 
-  <div class="list-group-item">
-      <div id="budget-display-label2">Utilities</div>
-      $185 spent
-      <div class="progress">
-      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+      <div class="list-group-item l1">
+          <div id="budget-label"  class="slide">
+            <label for="amount2">Utilities:</label>
+            <input type="text" id="amount2" readonly style="color:#f6931f;">
+          </div>
+          <br>
+          <div id="slider2"  class="slide">
+          </div>
       </div>
-      </div>      
-  </div>
 
-  <div class="list-group-item">
-      <div id="budget-display-label3">Travel</div>
-      $138 spent
-      <div class="progress">
-      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+      <div class="list-group-item l1">
+          <div id="budget-label"  class="slide">
+            <label for="amount3">Travel:</label>
+            <input type="text" id="amount3" readonly style="color:#f6931f;">
+          </div>
+          <br>
+          <div id="slider3"  class="slide">
+          </div>
       </div>
-      </div>
-  </div>
 
-  <div class="list-group-item">
-      <div id="budget-display-label4">Entertainment</div>
-      $49 spent
-      <div class="progress">
-      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+      <div class="list-group-item l1">
+          <div id="budget-label"  class="slide">
+            <label for="amount4">Entertainment:</label>
+            <input type="text" id="amount4" readonly style="color:#f6931f;">
+          </div>
+          <br>
+          <div id="slider4"  class="slide">
+          </div>
       </div>
+    </div>
+
+
+    <div id="budget-display" class="list-group">
+      <div class="list-group-item active">View Budget Spending</div>
+
+      <div class="list-group-item">
+          <div id="budget-display-label1">Food</div>
+          $249 spent
+          <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+          </div>
+          </div>
       </div>
-  </div>
-  
+
+      <div class="list-group-item">
+          <div id="budget-display-label2">Utilities</div>
+          $185 spent
+          <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100" style="width: 35%">
+          </div>
+          </div>      
+      </div>
+
+      <div class="list-group-item">
+          <div id="budget-display-label3">Travel</div>
+          $138 spent
+          <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+          </div>
+          </div>
+      </div>
+
+      <div class="list-group-item">
+          <div id="budget-display-label4">Entertainment</div>
+          $49 spent
+          <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%">
+          </div>
+          </div>
+      </div>
+      
+    </div>
 </div>
 
 </div id="badges">
@@ -268,7 +280,7 @@ $(function () {
   //Better to construct options first and then pass it as a parameter
   var options = {
     title: {
-      text: "Balance Over Time"
+      text: ""
     },
                 animationEnabled: true,
     data: [
@@ -310,11 +322,11 @@ $(function () {
 <script>
   smoothScroll.init({
     selector: '[data-scroll]', // Selector for links (must be a valid CSS selector)
-    selectorHeader: '[data-scroll-header]', // Selector for fixed headers (must be a valid CSS selector)
-    speed: 1000, // Integer. How fast to complete the scroll in milliseconds
+    // selectorHeader: '[data-scroll-header]', // Selector for fixed headers (must be a valid CSS selector)
+    speed: 2000, // Integer. How fast to complete the scroll in milliseconds
     easing: 'easeInOutCubic', // Easing pattern to use
     updateURL: true, // Boolean. Whether or not to update the URL with the anchor hash on scroll
-    offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
+    offset: 50, // Integer. How far to offset the scrolling anchor location in pixels
     callback: function ( toggle, anchor ) {} // Function to run after scrolling
   });
 </script>
