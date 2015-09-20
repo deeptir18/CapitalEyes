@@ -45,7 +45,8 @@ login();
       <ul class="nav navbar-nav">
         <li><a data-scroll href="#transactionList">Transaction History</a></li>
         <li><a data-scroll href="#calendar">Calendar</a></li>
-        <li><a data-scroll href="#">Budgets</a></li>
+        <li><a data-scroll href="#graph">Graph</a></li>
+        <li><a data-scroll href="#budget-setter">Budgets</a></li>
         <li><a data-scroll href="#">Badges</a></li>
       </ul>
     </div>
@@ -65,49 +66,53 @@ login();
 <div id="calendar">
 </div>
 
-<div id="circleInterface">
-</div>
+
+
 
 <div id="graph">
   <div id="chartContainer" style="height: 350px; width: 75%;"></div>
 </div>
 
 <div id="budget-setter" class="list-group">
-  <div class="list-group-item active">Edit your Budgets</div>
+  <div class="list-group-item active">Edit Monthly Budgets</div>
 
-  <div class="list-group-item">
-      <div id="budget-label">
-        <label for="amount1">Monthly Food Budget:</label>
-        <input type="text" id="amount1" readonly style="border:0; color:#f6931f; font-weight:bold;">
+  <div class="list-group-item l1">
+      <div id="budget-label"  class="slide">
+        <label for="amount1">Food:</label>
+        <input type="text" id="amount1" readonly style="color:#f6931f;">
       </div>
-      <div id="slider1">
+      <br>
+      <div id="slider1" class="slide">
       </div>
   </div>
 
-  <div class="list-group-item">
-      <div id="budget-label">
-        <label for="amount2">Monthly Utilities Budget:</label>
-        <input type="text" id="amount2" readonly style="border:0; color:#f6931f; font-weight:bold;">
+  <div class="list-group-item l1">
+      <div id="budget-label"  class="slide">
+        <label for="amount2">Utilities:</label>
+        <input type="text" id="amount2" readonly style="color:#f6931f;">
       </div>
-      <div id="slider2">
-      </div>
-  </div>
-
-  <div class="list-group-item">
-      <div id="budget-label">
-        <label for="amount3">Monthly Travel Budget:</label>
-        <input type="text" id="amount3" readonly style="border:0; color:#f6931f; font-weight:bold;">
-      </div>
-      <div id="slider3">
+      <br>
+      <div id="slider2"  class="slide">
       </div>
   </div>
 
-  <div class="list-group-item">
-      <div id="budget-label">
-        <label for="amount4">Monthly Entertainment Budget:</label>
-        <input type="text" id="amount4" readonly style="border:0; color:#f6931f; font-weight:bold;">
+  <div class="list-group-item l1">
+      <div id="budget-label"  class="slide">
+        <label for="amount3">Travel:</label>
+        <input type="text" id="amount3" readonly style="color:#f6931f;">
       </div>
-      <div id="slider4">
+      <br>
+      <div id="slider3"  class="slide">
+      </div>
+  </div>
+
+  <div class="list-group-item l1">
+      <div id="budget-label"  class="slide">
+        <label for="amount4">Entertainment:</label>
+        <input type="text" id="amount4" readonly style="color:#f6931f;">
+      </div>
+      <br>
+      <div id="slider4"  class="slide">
       </div>
   </div>
 </div>

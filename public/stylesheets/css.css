@@ -162,17 +162,22 @@ td.pls {
 }
 
 #budget-setter {
-	/*width:500px;
-	height: 400px;*/
-	/*border-radius:10px;*/
-	/*background-color: black;*/
+	width:400px;
+	float: left;
+	margin-left:100px;
+}
+
+#budget-display {
+	float:left;
 }
 
 #graph {
 	width: 80%;
 	height: 140%;
 	margin:0 auto;
-	margin-top:50px;
+	margin-top:70px;
+	margin-left: 20%;
+	margin-bottom: 70px;
 }
 
 thead#theadspecial {
@@ -187,3 +192,37 @@ thead#theadspecial {
 	background-color: #ECF0F1;
 }
 
+.slide {
+	display: inline;
+}
+
+#budget-label {
+	display: inline;
+	font-weight:300;
+	font-style: none;
+}
+
+input {
+	width:40px;
+}
+
+.progress-bar {
+	width:100px !important;
+}
+
+label {
+	font-weight: 300 !important;
+}
+
+.list-group-item.l1 {
+	display: -webkit-box
+}
+
+.list-group-item {
+	height:80px;
+}
+
+.list-group-item.active {
+	height:40px;
+	font-size: 1.2em;
+}
