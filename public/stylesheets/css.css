@@ -73,9 +73,6 @@ a.navbar-brand {
 
 #transactionList {
 	padding:50px;
-	min-height:100px;
-	max-height:500px;
-	overflow: auto;
 	width: 88%;
 	margin:0 auto;
 	margin-top:70px;
@@ -89,7 +86,6 @@ a.navbar-brand {
 thead {
 	font-weight: 400;
 	font-size: 1.1em;
-	background-color: "#FF11ff";
 }
 
 #calendar {
@@ -136,3 +132,10 @@ thead.fc-widget-header.fc-day-header {
 	background-color:#ECF0F1;
 	border-radius:10px;
 }
+
+.trans_explanation {
+	font-weight: 300;
+	padding-left: 100px;
+	font-size: 0.8em;
+}
+

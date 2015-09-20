@@ -22,12 +22,14 @@ var tags = {"55fe05f9ce1cef140015e34f":"Food", "55fe064dce1cef140015e350":"Food"
 var login = function() {
 
 	var userID = "55e94a6cf8d8770528e618dc";
+	html = "";
+	amount = 0;
 
 	$.ajax({
 		type: "GET",
 		url: "http://api.reimaginebanking.com/accounts/" + userID + "/purchases?key=504b6724f21e8161fc5b1ddbcb07a55d"})
 		.done(function(data){
-			var html = '<table class="table">' + '<thead>' + 
+			html += '<table class="table">' + '<thead>' + 
 		        '<td class="name">Transaction Name</td>' + 
 		        '<td class="date">Date</td>' + 
 		        '<td class="amount">Amount</td>' + 
@@ -42,6 +44,7 @@ var login = function() {
 				temp_html += "<td id='" + data[i]._id + "' class='date'>" + data[i].purchase_date + "</td>"
 				if (data[i].payee_id == userID){
 					temp_html += "<td id='" + data[i]._id + "' class='amount positive'>" + data[i].amount + "</td>"	
+					amount -= data[i].amount;
 				}
 				else {
 					temp_html += "<td id='" + data[i]._id + "' class='amount negative'>" + "-"+data[i].amount + "</td>"
@@ -51,20 +54,19 @@ var login = function() {
 				temp_html += "</tr>";
 				html += temp_html;
 			}
-			$("#transactions").html(html);
 		});
 
 	$.ajax({
 		type: "GET",
 		url: "http://api.reimaginebanking.com/accounts/" + userID + "/deposits?key=504b6724f21e8161fc5b1ddbcb07a55d"})
 		.done(function(data){
-			var html = "";
 			for (var i=0; i<data.length; i++)
 			{
 				var temp_html = "<tr>";
 				temp_html += "<td id='" + data[i]._id + "' class='name'>" + data[i].description + "</td>"
 				temp_html += "<td id='" + data[i]._id + "' class='date'>" + data[i].transaction_date + "</td>"
 				temp_html += "<td id='" + data[i]._id + "' class='amount positive'>" + data[i].amount + "</td>"	
+				amount += data[i].amount;
 				temp_html += "<td id='" + data[i]._id + "' class='tags'>" + '<div class="tag">' + tags[data[i]._id] + '</div>' + "</td>"
 				temp_html += "<td id='" + data[i]._id + "' class='editTag'>" + "+" + "</td>"
 				temp_html += "</tr>";
@@ -73,4 +75,5 @@ var login = function() {
 			html += "</table>";
 			$("#transactions").append(html);
 		});
+		console.log(amount)
 }
