@@ -10,6 +10,7 @@
 <!-- <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script type="text/javascript" src="/js/jquery.canvasjs.min.js"></script>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,400italic,600italic,300italic' rel='stylesheet' type='text/css'>
@@ -68,6 +69,7 @@ login();
 </div>
 
 <div id="graph">
+  <div id="chartContainer" style="height: 350px; width: 75%;"></div>
 </div>
 
 <div id="budget-setter" class="list-group">
@@ -255,6 +257,49 @@ login();
   });
 </script>
 
+<!-- Adding the line graph -->
+<script>
+$(function () {
+  //Better to construct options first and then pass it as a parameter
+  var options = {
+    title: {
+      text: "Balance Over Time"
+    },
+                animationEnabled: true,
+    data: [
+    {
+      type: "spline", //change it to line, area, column, pie, etc
+      animationEnabled: true,
+      axisY: {
+        title: "Balance ($)"
+      },
+      dataPoints: [
+        { x: 2.12, y: 169.66 },
+        { x: 3.31, y: 146.24 },
+        { x: 4.30, y: 363.78+ 217.54},
+        { x: 5.23, y: 139.01 + 217.54},
+        { x: 6.12, y: 97.13 + 217.54},
+        { x: 6.22, y: 1571.45 + 217.54},
+        { x: 7.23, y: 1487.69 + 217.54},
+        { x: 8.02, y: 974.81 + 217.54},
+        { x: 9.01, y: 949.91 + 217.54},
+        { x: 9.04, y: 2443.75 + 217.54},
+        { x: 9.06, y: 2437.86 + 217.54},
+        { x: 9.09, y: 2430.03 + 217.54},
+        { x: 9.12, y: 2422.78 + 217.54},
+        { x: 9.14, y: 2501.30 + 217.54},
+        { x: 9.17, y: 2492.06 + 217.54},
+        { x: 9.18, y: 2606.6 + 217.54},
+        { x: 9.19, y: 2549.35 + 217.54}
+      ]
+    }
+    ]
+  };
+
+  $("#chartContainer").CanvasJSChart(options);
+
+});
+</script>
 
 
 <script>

@@ -168,6 +168,13 @@ td.pls {
 	/*background-color: black;*/
 }
 
+#graph {
+	width: 80%;
+	height: 140%;
+	margin:0 auto;
+	margin-top:50px;
+}
+
 thead#theadspecial {
 	background-color: #f7f9f9;
 }
