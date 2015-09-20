@@ -18,6 +18,7 @@
 <script src='/js/jquery.min.js'></script>
 <script src='/js/moment.min.js'></script>
 <script src='/js/fullcalendar.js'></script>
+<script src="/js/smooth-scroll.js"></script>
 <link href="/stylesheets/css.css" rel="stylesheet">
 </head>
 
@@ -35,12 +36,12 @@
     </div>
     <div class="collapse navbar-collapse" id="navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#transactionList">Transaction History</a></li>
-        <li><a href="#">Calendar</a></li>
-        <li><a href="#">Monthly View</a></li>
-        <li><a href="#">Charts</a></li>
-        <li><a href="#">Budgets</a></li>
-        <li><a href="#">Badges</a></li>
+        <li><a data-scroll href="#transactionList">Transaction History</a></li>
+        <li><a data-scroll href="#calendar">Calendar</a></li>
+        <li><a data-scroll href="#" onClick="test()">Monthly View</a></li>
+        <li><a data-scroll href="#">Charts</a></li>
+        <li><a data-scroll href="#">Budgets</a></li>
+        <li><a data-scroll href="#">Badges</a></li>
       </ul>
     </div>
   </div>
@@ -70,6 +71,23 @@
         <td>$30</td>
         <td>Travel</td>
       </tr>
+      <tr>
+        <td id="2" class="name">Ice cream</td>
+        <td id="2" class="date">1/1/2015</td>
+        <td id="2" class="amount">$50</td>
+        <td id="2" class="tags">Food</td>
+      </tr>
+      <tr>
+        <td>T card</td>
+        <td>2/5/2015</td>
+        <td>$30</td>
+        <td>Travel</td>
+      </tr>
+      <tr>
+        <td id="2" class="name">Ice cream</td>
+        <td id="2" class="date">1/1/2015</td>
+        <td id="2" class="amount">$50</td>
+        <td id="2" class="tags">Food</td>
       </tr>
     </table>
   </div>
@@ -92,5 +110,17 @@
 
 </div id="badges">
 </div>
+
+<script>
+  smoothScroll.init({
+    selector: '[data-scroll]', // Selector for links (must be a valid CSS selector)
+    selectorHeader: '[data-scroll-header]', // Selector for fixed headers (must be a valid CSS selector)
+    speed: 1000, // Integer. How fast to complete the scroll in milliseconds
+    easing: 'easeInOutCubic', // Easing pattern to use
+    updateURL: true, // Boolean. Whether or not to update the URL with the anchor hash on scroll
+    offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
+    callback: function ( toggle, anchor ) {} // Function to run after scrolling
+  });
+</script>
 
 </body>

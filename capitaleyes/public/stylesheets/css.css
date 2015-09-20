@@ -88,10 +88,21 @@ a.navbar-brand {
 thead {
 	font-weight: 400;
 	font-size: 1.1em;
+	background-color: "#FF11ff";
 }
 
 #calendar {
 	width: 80%;
 	margin:0 auto;
+}
+
+h2{
+	font-weight: 400 !important;
+	font-size: 1.5em !important;
+}
+
+thead.fc-widget-header.fc-day-header {
+	font-weight: 300 !important;	
+	font-size: 0.2em !important;
 }
 
