@@ -82,6 +82,8 @@ login();
   </div>
 </div>
 
+<div id="chartContainer2" style="height: 350px; width: 75%;"></div>
+
 
 <div id="budgetstuff">
     <div id="budget-setter" class="list-group">
@@ -171,8 +173,6 @@ login();
     </div>
 </div>
 
-</div id="badges">
-</div>
 
 
 
@@ -318,6 +318,40 @@ $(function () {
 });
 </script>
 
+<script>
+window.onload = function () {
+  var chart = new CanvasJS.Chart("chartContainer2",
+  {
+    title:{
+      text: "Spending By Category"
+    },
+                animationEnabled: true,
+    legend:{
+      verticalAlign: "bottom",
+      horizontalAlign: "center"
+    },
+    data: [
+    {        
+      indexLabelFontSize: 15,
+      indexLabelFontFamily: "Arial",       
+      indexLabelFontColor: "darkgrey", 
+      indexLabelLineColor: "darkgrey",        
+      indexLabelPlacement: "outside",
+      type: "pie",       
+      showInLegend: true,
+      toolTipContent: "{y} - <strong>#percent%</strong>",
+      dataPoints: [
+        {  y: 249, legendText:"Food", indexLabel: "Food" },
+        {  y: 185, legendText:"Utilities", indexLabel: "Utilities" },
+        {  y: 138, legendText:"Entertainment", indexLabel: "Entertainment" },
+        {  y: 49, legendText:"Travel" , exploded: true, indexLabel: "Travel"}     
+      ]
+    }
+    ]
+  });
+  chart.render();
+}
+</script>
 
 <script>
   smoothScroll.init({
