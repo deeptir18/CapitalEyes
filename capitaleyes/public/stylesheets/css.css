@@ -73,6 +73,7 @@ a.navbar-brand {
 
 #transactionList {
 	padding:50px;
+	min-height:100px;
 	max-height:500px;
 	overflow: auto;
 	width: 88%;
@@ -122,9 +123,16 @@ thead.fc-widget-header.fc-day-header {
 }
 
 .negative {
-	color:red;
+	color:#E74C3C;
 }
 
 .positive {
-	color:green;
+	color:#29CCB9;
+}
+
+.tag {
+	display: inline;
+	padding: 5px 17px 5px 17px;
+	background-color:#ECF0F1;
+	border-radius:10px;
 }
