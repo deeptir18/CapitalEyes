@@ -74,28 +74,50 @@ login();
 
 <div id="budget-setter">
   <div id="budget-label">
-    <label for="amount1">Monthly Budget:</label>
+    <label for="amount1">Monthly Food Budget:</label>
     <input type="text" id="amount1" readonly style="border:0; color:#f6931f; font-weight:bold;">
   </div>
   <div id="slider1">
   </div>
 
   <div id="budget-label">
-    <label for="amount2">Monthly Budget:</label>
+    <label for="amount2">Monthly Utilities Budget:</label>
     <input type="text" id="amount2" readonly style="border:0; color:#f6931f; font-weight:bold;">
   </div>
   <div id="slider2">
   </div>
 
   <div id="budget-label">
-    <label for="amount3">Monthly Budget:</label>
+    <label for="amount3">Monthly Travel Budget:</label>
     <input type="text" id="amount3" readonly style="border:0; color:#f6931f; font-weight:bold;">
   </div>
   <div id="slider3">
   </div>
+
+  <div id="budget-label">
+    <label for="amount4">Monthly Entertainment Budget:</label>
+    <input type="text" id="amount4" readonly style="border:0; color:#f6931f; font-weight:bold;">
+  </div>
+  <div id="slider4">
+  </div>
 </div>
 
 <div id="budget-display">
+  <div id="budget-display-label1">Food</div>
+  $249 spent
+  <div id="progress1"></div>
+
+  <div id="budget-display-label2">Utilities</div>
+  $185 spent
+  <div id="progress2"></div>
+
+  <div id="budget-display-label3">Travel</div>
+  $138 spent
+  <div id="progress3"></div>
+
+  <div id="budget-display-label4">Entertainment</div>
+  $49 spent
+  <div id="progress4"></div>
 </div>
 
 </div id="badges">
@@ -105,9 +127,9 @@ login();
 <script>
   $(function() {
     $( "#slider1" ).slider({
-      value:100,
+      value:300,
       min: 0,
-      max: 500,
+      max: 1000,
       step: 1,
       slide: function( event, ui ) {
         $( "#amount1" ).val( "$" + ui.value );
@@ -120,9 +142,9 @@ login();
 <script>
   $(function() {
     $( "#slider2" ).slider({
-      value:100,
+      value:500,
       min: 0,
-      max: 500,
+      max: 1000,
       step: 1,
       slide: function( event, ui ) {
         $( "#amount2" ).val( "$" + ui.value );
@@ -135,15 +157,63 @@ login();
 <script>
   $(function() {
     $( "#slider3" ).slider({
-      value:100,
+      value:200,
       min: 0,
-      max: 500,
+      max: 1000,
       step: 1,
       slide: function( event, ui ) {
         $( "#amount3" ).val( "$" + ui.value );
       }
     });
     $( "#amount3" ).val( "$" + $( "#slider3" ).slider( "value" ) );
+  });
+</script>
+
+<script>
+  $(function() {
+    $( "#slider4" ).slider({
+      value:150,
+      min: 0,
+      max: 1000,
+      step: 1,
+      slide: function( event, ui ) {
+        $( "#amount4" ).val( "$" + ui.value );
+      }
+    });
+    $( "#amount4" ).val( "$" + $( "#slider4" ).slider( "value" ) );
+  });
+</script>
+
+
+<script>
+  $(function() {
+    $( "#progress1" ).progressbar({
+      value: 83
+    });
+  });
+ </script>
+
+<script>
+  $(function() {
+    $( "#progress2" ).progressbar({
+      value: 37
+    });
+  });
+</script>
+
+<script>
+  $(function() {
+    $( "#progress3" ).progressbar({
+      value: 69
+    });
+  });
+</script>
+
+<script>
+  $(function() {
+    $( "#progress4" ).progressbar({
+      value: 46
+    });
   });
 </script>
 
