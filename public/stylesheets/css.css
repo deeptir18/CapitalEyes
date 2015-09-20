@@ -93,13 +93,20 @@ thead {
 	margin:0 auto;
 }
 
+
+#budget-display {
+	position: absolute;
+	left: 800px;
+	width: 300px;
+}
+
 #budget-setter {
 	width: 80%;
 	margin:0 auto;
 	margin-top:50px;
 }
 
-#slider1, #slider2, #slider3 {
+#slider1, #slider2, #slider3, #slider4 {
     float: left;
     clear: left;
     width: 300px;
