@@ -91,6 +91,7 @@ thead {
 
 #calendar {
 	width: 80%;
+	height: 50%;
 	margin:0 auto;
 }
 
@@ -156,7 +157,7 @@ tr:hover {
 	background-color: #f7f9f9;
 }
 
-td {
+td.pls {
 	padding-left:50px !important;
 }
 
