@@ -37,7 +37,6 @@ var login = function() {
 
 			for (var i=0; i<data.length; i++)
 			{
-				console.log(data[i])
 				var temp_html = "<tr>";
 				temp_html += "<td id='" + data[i]._id + "' class='name'>" + data[i].description + "</td>"
 				temp_html += "<td id='" + data[i]._id + "' class='date'>" + data[i].purchase_date + "</td>"
@@ -47,14 +46,31 @@ var login = function() {
 				else {
 					temp_html += "<td id='" + data[i]._id + "' class='amount negative'>" + "-"+data[i].amount + "</td>"
 				}
-				temp_html += "<td id='" + data[i]._id + "' class='tags'>" + tags[data[i]._id] + "</td>"
+				temp_html += "<td id='" + data[i]._id + "' class='tags'>" + '<div class="tag">' + tags[data[i]._id] + '</div>' + "</td>"
 				temp_html += "<td id='" + data[i]._id + "' class='editTag'>" + "+" + "</td>"
 				temp_html += "</tr>";
 				html += temp_html;
 			}
+			$("#transactions").html(html);
+		});
 
+	$.ajax({
+		type: "GET",
+		url: "http://api.reimaginebanking.com/accounts/" + userID + "/deposits?key=504b6724f21e8161fc5b1ddbcb07a55d"})
+		.done(function(data){
+			var html = "";
+			for (var i=0; i<data.length; i++)
+			{
+				var temp_html = "<tr>";
+				temp_html += "<td id='" + data[i]._id + "' class='name'>" + data[i].description + "</td>"
+				temp_html += "<td id='" + data[i]._id + "' class='date'>" + data[i].transaction_date + "</td>"
+				temp_html += "<td id='" + data[i]._id + "' class='amount positive'>" + data[i].amount + "</td>"	
+				temp_html += "<td id='" + data[i]._id + "' class='tags'>" + '<div class="tag">' + tags[data[i]._id] + '</div>' + "</td>"
+				temp_html += "<td id='" + data[i]._id + "' class='editTag'>" + "+" + "</td>"
+				temp_html += "</tr>";
+				html += temp_html;
+			}
 			html += "</table>";
-			console.log(html)
-			$("#transactions").innerHTML = html;
+			$("#transactions").append(html);
 		});
 }
