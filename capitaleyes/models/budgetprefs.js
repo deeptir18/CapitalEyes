@@ -3,12 +3,12 @@ var Schema = mongoose.Schema;
 ObjectId = Schema.ObjectId;
 
 var BudgetSchema = new Schema( {
-	user_id: String,
+	userID: String,
 	item: String,
 	monthlyMax: Number
 });
 
-var BudgetPref = mongoose.model("BudgetObj", BudgetSchema);
+var BudgetPref = mongoose.model("BudgetPref", BudgetSchema);
 
 var checkLength = function(s) {
 	return s.length > 0;
