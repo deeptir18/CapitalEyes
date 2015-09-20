@@ -19,7 +19,7 @@ var login = function() {
 		.done(function(data){
 			for (var i=0; i<data.length; i++)
 			{
-				var temp_html = "<tr>";
+				var temp_html = "<tr class='pls'>";
 				temp_html += "<td id='" + data[i]._id + "' class='pls name'>" + data[i].description + "</td>"
 				temp_html += "<td id='" + data[i]._id + "' class='pls date'>" + data[i].purchase_date + "</td>"
 				balance -= data[i].amount;
@@ -27,7 +27,7 @@ var login = function() {
 				temp_html += "<td id='" + data[i]._id + "' class='pls tags'>" + '<div class="tag">' + tags[data[i]._id] + '</div>' + "</td>"
 				temp_html += "</tr>";
 				transactions.push({"date":data[i].purchase_date, "html":temp_html})
-				events.push({"title":data[i].description + ", " + "-$"+data[i].amount, "start":new Date(data[i].purchase_date)})
+				events.push({"title":data[i].description + ", " + "-$"+data[i].amount, "start":new Date(data[i].purchase_date), "backgroundColor":"#E74C3C", "borderColor":"transparent", "className":"neg"})
 			}
 		});
 
@@ -37,7 +37,7 @@ var login = function() {
 		.done(function(data){
 			for (var i=0; i<data.length; i++)
 			{
-				var temp_html = "<tr>";
+				var temp_html = "<tr class='pls'>";
 				temp_html += "<td id='" + data[i]._id + "' class='pls name'>" + data[i].description + "</td>"
 				temp_html += "<td id='" + data[i]._id + "' class='pls date'>" + data[i].transaction_date + "</td>"
 				temp_html += "<td id='" + data[i]._id + "' class='pls amount positive'>$" + data[i].amount + "</td>"	
@@ -45,7 +45,7 @@ var login = function() {
 				temp_html += "<td id='" + data[i]._id + "' class='pls tags'>" + '<div class="tag">' + "Income" + '</div>' + "</td>"
 				temp_html += "</tr>";
 				transactions.push({"date":data[i].transaction_date, "html":temp_html})
-				events.push({"title":data[i].description + ", " + "-$"+data[i].amount, "start":new Date(data[i].purchase_date)})
+				events.push({"title":data[i].description + ", " + "-$"+data[i].amount, "start":new Date(data[i].transaction_date), "backgroundColor":"#29CCB9", "borderColor":"transparent", "className":"pos"})
 			}
 			transactions.sort(function(a,b){
   				return new Date(b.date) - new Date(a.date);

@@ -70,56 +70,96 @@ login();
 <div id="graph">
 </div>
 
-<div id="budget-setter">
-  <div id="budget-label">
-    <label for="amount1">Monthly Food Budget:</label>
-    <input type="text" id="amount1" readonly style="border:0; color:#f6931f; font-weight:bold;">
-  </div>
-  <div id="slider1">
+<div id="budget-setter" class="list-group">
+  <div class="list-group-item active">Edit your Budgets</div>
+
+  <div class="list-group-item">
+      <div id="budget-label">
+        <label for="amount1">Monthly Food Budget:</label>
+        <input type="text" id="amount1" readonly style="border:0; color:#f6931f; font-weight:bold;">
+      </div>
+      <div id="slider1">
+      </div>
   </div>
 
-  <div id="budget-label">
-    <label for="amount2">Monthly Utilities Budget:</label>
-    <input type="text" id="amount2" readonly style="border:0; color:#f6931f; font-weight:bold;">
-  </div>
-  <div id="slider2">
-  </div>
-
-  <div id="budget-label">
-    <label for="amount3">Monthly Travel Budget:</label>
-    <input type="text" id="amount3" readonly style="border:0; color:#f6931f; font-weight:bold;">
-  </div>
-  <div id="slider3">
+  <div class="list-group-item">
+      <div id="budget-label">
+        <label for="amount2">Monthly Utilities Budget:</label>
+        <input type="text" id="amount2" readonly style="border:0; color:#f6931f; font-weight:bold;">
+      </div>
+      <div id="slider2">
+      </div>
   </div>
 
-  <div id="budget-label">
-    <label for="amount4">Monthly Entertainment Budget:</label>
-    <input type="text" id="amount4" readonly style="border:0; color:#f6931f; font-weight:bold;">
+  <div class="list-group-item">
+      <div id="budget-label">
+        <label for="amount3">Monthly Travel Budget:</label>
+        <input type="text" id="amount3" readonly style="border:0; color:#f6931f; font-weight:bold;">
+      </div>
+      <div id="slider3">
+      </div>
   </div>
-  <div id="slider4">
+
+  <div class="list-group-item">
+      <div id="budget-label">
+        <label for="amount4">Monthly Entertainment Budget:</label>
+        <input type="text" id="amount4" readonly style="border:0; color:#f6931f; font-weight:bold;">
+      </div>
+      <div id="slider4">
+      </div>
   </div>
 </div>
 
-<div id="budget-display">
-  <div id="budget-display-label1">Food</div>
-  $249 spent
-  <div id="progress1"></div>
 
-  <div id="budget-display-label2">Utilities</div>
-  $185 spent
-  <div id="progress2"></div>
+<div id="budget-display" class="list-group">
+  <div class="list-group-item active">View Budget Spending</div>
 
-  <div id="budget-display-label3">Travel</div>
-  $138 spent
-  <div id="progress3"></div>
+  <div class="list-group-item">
+      <div id="budget-display-label1">Food</div>
+      $249 spent
+      <div class="progress">
+      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+      </div>
+      </div>
+  </div>
 
-  <div id="budget-display-label4">Entertainment</div>
-  $49 spent
-  <div id="progress4"></div>
+  <div class="list-group-item">
+      <div id="budget-display-label2">Utilities</div>
+      $185 spent
+      <div class="progress">
+      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+      </div>
+      </div>      
+  </div>
+
+  <div class="list-group-item">
+      <div id="budget-display-label3">Travel</div>
+      $138 spent
+      <div class="progress">
+      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+      </div>
+      </div>
+  </div>
+
+  <div class="list-group-item">
+      <div id="budget-display-label4">Entertainment</div>
+      $49 spent
+      <div class="progress">
+      <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+      </div>
+      </div>
+  </div>
+  
 </div>
 
 </div id="badges">
 </div>
+
+
+
+
+
+
 
 
 <script>

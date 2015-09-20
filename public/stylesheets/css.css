@@ -153,7 +153,7 @@ thead.fc-widget-header.fc-day-header {
 
 }
 
-tr:hover {
+tr.pls:hover {
 	background-color: #f7f9f9;
 }
 
@@ -162,12 +162,21 @@ td.pls {
 }
 
 #budget-setter {
-	width:500px;
-	height: 400px;
-	border-radius:10px;
-	background-color: ;
+	/*width:500px;
+	height: 400px;*/
+	/*border-radius:10px;*/
+	/*background-color: black;*/
 }
 
 thead#theadspecial {
 	background-color: #f7f9f9;
 }
+
+.fc-event .fc-content {
+	padding: 10px;
+}
+
+.fc-unthemed .fc-today {
+	background-color: #ECF0F1;
+}
+
