@@ -22,7 +22,10 @@
 <script src='/js/fullcalendar.js'></script>
 <script src="/js/smooth-scroll.js"></script>
 <link href="/stylesheets/css.css" rel="stylesheet">
-
+<script>
+var balance = 0;
+login();
+</script>
 </head>
 
 <body>
@@ -53,7 +56,7 @@
 
 <div id="transactionList">
   <div class="panel panel-default">
-    <div class="panel-heading">Transaction History<span class="trans_explanation">see your transaction history in a simple list layout, editable tags</span></div>
+    <div class="panel-heading">Transaction History<span class="trans_explanation">see your transaction history in a simple list layout, editable tags</span><span class="balance">Balance: <span class="balanceval"></span></span></div>
     <div id="transactions"></div>
   </div>
 </div>
