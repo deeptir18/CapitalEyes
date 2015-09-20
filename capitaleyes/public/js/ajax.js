@@ -29,16 +29,22 @@ function addMoreTags() {
 	});
 }
 
-var userID = "55e94a6cf8d8770528e618dc";
 
-$.ajax({
-	type: "GET",
-	url: "/login",
-	data: "&userID=" + userID
-	success: function(data) {
-		transactionID = data.transactionID
-		tag = data.tag
+function login() {
+	var userID = "55e94a6cf8d8770528e618dc";
 
-	}
+	$.ajax({
+		type: "GET",
+		url: "/login",
+		data: "&userID=" + userID
+		success: function(data) {
+			// transactionID = data.transactionID
+			// tag = data.tag
+			console.log("logging in")
+			var budgets = data.budgetArray
+			var transactions = data.transactionArray
 
-});
+		}
+
+	});
+}

@@ -106,3 +106,10 @@ thead.fc-widget-header.fc-day-header {
 	font-size: 0.2em !important;
 }
 
+.negative {
+	color:red;
+}
+
+.positive {
+	color:green;
+}
